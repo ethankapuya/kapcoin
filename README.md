@@ -123,6 +123,17 @@ stratum+tcp://127.0.0.1:9554
 
 Since kapcoin uses the same scrypt algorithm as Litecoin, any Litecoin miner (CPU, GPU, or ASIC) works.
 
+## Command reference
+
+See [COMMANDS.md](COMMANDS.md) for the full list of all `kapcoin-cli` commands with descriptions.
+
+Quick help from the CLI:
+
+```sh
+./src/kapcoin-cli help              # list all commands
+./src/kapcoin-cli help sendtoaddress # detailed help for a specific command
+```
+
 ## Network
 
 Kapcoin runs three independent networks:
