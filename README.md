@@ -57,15 +57,14 @@ On macOS with Homebrew, you may need to pass extra flags:
 ```
 
 Binaries end up in `src/`:
-- `litecoind` — the daemon (will be renamed to `kapcoind` in a future release)
-- `litecoin-cli` — the RPC client
+- `kapcoin-cli` — the RPC client
 
 ## Run
 
 ### Start the daemon
 
 ```sh
-./src/litecoind -daemon
+./src/kapcoind -daemon
 ```
 
 ### Connect to the seed node
@@ -73,7 +72,7 @@ Binaries end up in `src/`:
 Until DNS seeds are set up, connect manually:
 
 ```sh
-./src/litecoind -daemon -addnode=163.192.54.36:9555
+./src/kapcoind -daemon -addnode=163.192.54.36:9555
 ```
 
 Replace `163.192.54.36` with the IP of a known kapcoin node (see the Releases page or project description for the current seed node IP).
@@ -81,8 +80,8 @@ Replace `163.192.54.36` with the IP of a known kapcoin node (see the Releases pa
 ### Check status
 
 ```sh
-./src/litecoin-cli getblockchaininfo
-./src/litecoin-cli getpeerinfo
+./src/kapcoin-cli getblockchaininfo
+./src/kapcoin-cli getpeerinfo
 ```
 
 ## Mine
@@ -90,8 +89,8 @@ Replace `163.192.54.36` with the IP of a known kapcoin node (see the Releases pa
 ### Create a wallet and get an address
 
 ```sh
-./src/litecoin-cli createwallet "mywallet"
-./src/litecoin-cli getnewaddress
+./src/kapcoin-cli createwallet "mywallet"
+./src/kapcoin-cli getnewaddress
 ```
 
 Your address will start with `K`.
@@ -99,7 +98,7 @@ Your address will start with `K`.
 ### Solo mine (regtest / local testing)
 
 ```sh
-./src/litecoin-cli generatetoaddress 10 <your-K-address>
+./src/kapcoin-cli generatetoaddress 10 <your-K-address>
 ```
 
 This instantly mines 10 blocks and sends the 50 KAP reward for each to your address. Only works on regtest.
@@ -124,7 +123,7 @@ Kapcoin runs three independent networks:
 | Testnet | 19555 | 19554 | `-testnet` |
 | Regtest | 19556 | 19557 | `-regtest` |
 
-Data directory: `~/.litecoin/` (will be changed to `~/.kapcoin/` in a future release).
+Data directory: `~/.kapcoin/` (macOS: `~/Library/Application Support/Kapcoin/`).
 
 ## Project structure
 

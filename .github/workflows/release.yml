@@ -27,8 +27,8 @@ jobs:
       - name: Package
         run: |
           mkdir -p kapcoin-${{ github.ref_name }}-linux-x86_64
-          cp src/litecoind kapcoin-${{ github.ref_name }}-linux-x86_64/kapcoind
-          cp src/litecoin-cli kapcoin-${{ github.ref_name }}-linux-x86_64/kapcoin-cli
+          cp src/kapcoind kapcoin-${{ github.ref_name }}-linux-x86_64/kapcoind
+          cp src/kapcoin-cli kapcoin-${{ github.ref_name }}-linux-x86_64/kapcoin-cli
           cp README.md COPYING kapcoin-${{ github.ref_name }}-linux-x86_64/
           tar czf kapcoin-${{ github.ref_name }}-linux-x86_64.tar.gz kapcoin-${{ github.ref_name }}-linux-x86_64/
 
@@ -69,8 +69,8 @@ jobs:
       - name: Package
         run: |
           mkdir -p kapcoin-${{ github.ref_name }}-macos-arm64
-          cp src/litecoind kapcoin-${{ github.ref_name }}-macos-arm64/kapcoind
-          cp src/litecoin-cli kapcoin-${{ github.ref_name }}-macos-arm64/kapcoin-cli
+          cp src/kapcoind kapcoin-${{ github.ref_name }}-macos-arm64/kapcoind
+          cp src/kapcoin-cli kapcoin-${{ github.ref_name }}-macos-arm64/kapcoin-cli
           cp README.md COPYING kapcoin-${{ github.ref_name }}-macos-arm64/
           tar czf kapcoin-${{ github.ref_name }}-macos-arm64.tar.gz kapcoin-${{ github.ref_name }}-macos-arm64/
 
