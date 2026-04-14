@@ -1,12 +1,12 @@
 # Kapcoin (KAP)
 
-A scrypt proof-of-work cryptocurrency forked from Litecoin. This is a showcase/learning project — a fully functional Layer-1 chain with its own genesis block, network identity, and mining.
+A scrypt proof-of-work cryptocurrency, consisting of a fully functional Layer-1 chain and (hopefully) robust architecture and tooling for network participants.
 
-## Quick facts
+## About the Coin
 
 | | |
 |---|---|
-| Algorithm | Scrypt (same as Litecoin) |
+| Algorithm | Scrypt (used by Dogecoin, Litecoin) |
 | Block time | 2.5 minutes |
 | Block reward | 50 KAP |
 | Halving interval | 840,000 blocks |
