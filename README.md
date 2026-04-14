@@ -22,6 +22,13 @@ Pre-built binaries for Linux and macOS are available on the [Releases](../../rel
 
 ## Build from source
 
+```sh
+git clone https://github.com/ethankapuya/kapcoin.git
+cd kapcoin
+```
+
+All commands below should be run from inside the `kapcoin` directory.
+
 ### Dependencies (macOS)
 
 ```sh
