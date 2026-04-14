@@ -37,26 +37,29 @@ sudo apt-get install -y build-essential libtool autotools-dev automake \
     libssl-dev libdb4.8-dev libdb4.8++-dev libzmq3-dev libfmt-dev
 ```
 
-### Compile
+### Compile (Linux)
 
 ```sh
 ./autogen.sh
-./configure --with-gui=no --disable-tests --disable-bench
+./configure --with-gui=no --disable-tests --disable-bench --without-miniupnpc
 make -j$(nproc)
 ```
 
-On macOS with Homebrew, you may need to pass extra flags:
+### Compile (macOS)
 
 ```sh
+./autogen.sh
 ./configure --with-gui=no --disable-tests --disable-bench --without-miniupnpc \
     BDB_LIBS="-L$(brew --prefix berkeley-db@4)/lib -ldb_cxx" \
     BDB_CFLAGS="-I$(brew --prefix berkeley-db@4)/include" \
     --with-boost=$(brew --prefix boost) \
     LDFLAGS="-L$(brew --prefix)/lib" \
     CPPFLAGS="-I$(brew --prefix)/include"
+make -j$(sysctl -n hw.ncpu)
 ```
 
 Binaries end up in `src/`:
+- `kapcoind` — the daemon
 - `kapcoin-cli` — the RPC client
 
 ## Run
