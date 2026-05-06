@@ -1,4 +1,4 @@
-# Kapcoin (KAP)
+# Kapcoin (KAP) - My Cryptocurrency
 
 A scrypt proof-of-work cryptocurrency, consisting of a fully functional Layer-1 chain and (hopefully) robust architecture and tooling for network participants.
 
